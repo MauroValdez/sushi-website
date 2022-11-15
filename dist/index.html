@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/webp;base64,UklGRiwCAABXRUJQVlA4WAoAAAAQAAAAHwAAHQAAQUxQSPgAAAABgGrbturmjHHklaFPSOEz3qjmOtboouKLIdvfIFXFzBx05VYHzy68d+7NH0TEBJDTmDfiMbkf3AaA5zl2FFtB4Iob7w3KEReDX9BW2G4QeolbeV8WDbaJvUHdQHXOwmyJDsD3sG4JwRKA75jGkyCBMqkwRTi9UizBv2HR5ABPID625+RvruA4EZCDfRMQpNhvBC4F+RT5crzmJD8ZIn9zDqBlIylDwTkIbEUmSdkraNUsJBUipakA5QNdfpLUOWDV9IhmLUTquGCeKa5JMel7yyNEZHCQ97mfZLJlIiKuzZvk8fFmIkSOuTVFRMTkvtz9r53d1G52B1ZQOCAOAQAA8AYAnQEqIAAeAD7RVKNLqCSjIbAIAQAaCWwAnTM0OniA7wDeM0aBtVcvX2p3OhmUak69G9nqntf4vIsvi5FsAAD+6NB/G2EAlX+ZlwgFy5hTBZaDrtV2ZoCrqjdbD4hM4FtJcXUoiPzth6c1FKAKEFfRI/o/TidDSL6o9j/GOhmENf98EGAnsNeFBgBQlDGo7jefj4yoJkh8NjhLD6IYZRUxPEMvH6asD9YupClz0Vw1X3RYCQusvRuAER9ThCNEipaEd7U9DMcKFBOpkemTYT4gOqu9NC5EQp/kZ1z4QgC74j5OkgxR3+9abCqKidtltiRjdFhN6JvPg3MiLHzxDpHuRM+x76tnybvNAAAA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushi Restaurant Website</title>
+  <script type="module" crossorigin src="/assets/index.06a4b455.js"></script>
+  <link rel="stylesheet" href="/assets/index.f5c83f46.css">
+</head>
+
+<body>
+
+  <!--@note = header = -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <img src="data:image/webp;base64,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" alt="logo image">Sushi
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#popular" class="nav__link">Popular</a>
+          </li>
+          <li class="nav__item">
+            <a href="#recently" class="nav__link">Recently</a>
+          </li>
+        </ul>
+
+        <!--@note = close button = -->
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+
+        <img src="/assets/leaf-branch-4.642f4f78.webp" alt="leaf-branch-4" class="nav__img-1">
+        <img src="/assets/leaf-branch-3.6ed41119.webp" alt="leaf-branch-3" class="nav__img-2">
+
+      </div>
+
+      <div class="nav__buttons">
+        <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-apps-line"></i>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <!-- =/header = -->
+
+  <!--@note = main = -->
+  <main class="main">
+
+    <!--@note = home = -->
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <img src="/assets/home-sushi-rolls.62ba1d66.webp" alt="sushi-rolls" class="home__img">
+
+        <div class="home__data">
+          <h1 class="home__title">
+            Enjoy Delicious
+            <div>
+              <img src="data:image/webp;base64,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" alt="sushi-title">Sushi Food
+            </div>
+          </h1>
+          <p class="home__description">
+            Enjoy a good dinner with the best dishes in
+            the restaurant and improve your day.
+          </p>
+
+          <a href="#" class="button">
+            Order Now <i class="ri-arrow-right-line"></i>
+          </a>
+
+        </div>
+      </div>
+
+
+      <img src="/assets/leaf-branch-2.4c17a1f1.webp" alt="leaf-branch-2" class="home__leaf-1">
+      <img src="/assets/leaf-branch-4.642f4f78.webp" alt="leaf-branch-4" class="home__leaf-2">
+
+    </section>
+    <!-- =/home = -->
+
+    <!--@note = about = -->
+    <section class="about section" id="about">
+      <div class="about__container container grid">
+        <div class="about__data">
+          <span class="section__subtitle">About Us</span>
+          <h2 class="section__title about__title">
+            <div>
+              We Provide
+              <img src="data:image/webp;base64,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" alt="about-sushi-title">
+            </div>
+            Healthy Food
+          </h2>
+          <p class="about__description">
+            Food comes to us from our relatives, whether they
+            have wings or roots. This is how we consider food,
+            it also has a culture. It has a history that passes
+            from generation to generation.
+          </p>
+        </div>
+
+        <img src="/assets/about-sushi.a8b9ba3d.webp" alt="about-sushi" class="about__img">
+      </div>
+
+      <img src="/assets/leaf-branch-1.8d7d8e8b.webp" alt="leaf-branch-1" class="about__leaf">
+    </section>
+    <!-- =/about = -->
+
+    <!--@note = popular = -->
+    <section class="popular section" id="popular">
+      <span class="section__subtitle">The Best Food</span>
+      <h2 class="section__title">Popular Dishes</h2>
+
+      <div class="popular__container container grid">
+        <article class="popular__card">
+          <img src="/assets/popular-onigiri.2b715fbf.webp" alt="popular-onigiri" class="popular__img">
+
+          <h3 class="popular__name">Onigiri</h3>
+          <span class="popular__description">Japanese Dish</span>
+          <span class="popular__price">$10.99</span>
+
+          <button class="popular__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+
+        <article class="popular__card">
+          <img src="/assets/popular-spring-rols.ffa32078.webp" alt="popular-spring-rolls" class="popular__img">
+
+          <h3 class="popular__name">Spring Rolls</h3>
+          <span class="popular__description">Japanese Dish</span>
+          <span class="popular__price">$15.99</span>
+
+          <button class="popular__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+
+        <article class="popular__card">
+          <img src="/assets/popular-sushi-rolls.46e6b41a.webp" alt="popular-sushi-rolls" class="popular__img">
+
+          <h3 class="popular__name">Sushi Rolls</h3>
+          <span class="popular__description">Japanese Dish</span>
+          <span class="popular__price">$19.99</span>
+
+          <button class="popular__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+      </div>
+    </section>
+    <!-- =/popular = -->
+
+    <!--@note = recently = -->
+    <section class="recently section" id="recently">
+      <div class="recently__container container grid">
+        <div class="recently__data">
+          <span class="section__subtitle">Recently Added</span>
+          <h2 class="section__title">
+            Sushi Samurai <br>
+            Salmon Cheese
+          </h2>
+          <p class="recently__description">
+            Take a look at what's new. And do not deprive
+            yourself of a good meal, enjoy and be happy.
+          </p>
+
+          <a href="#" class="button">
+            Order Now <i class="ri-arrow-right-line"></i>
+          </a>
+          <img src="/assets/spinach-leaf.da70d927.webp" alt="spinach-leaf" class="recently__data-img">
+        </div>
+        <img src="/assets/recently-salmon-sushi.f43feb61.webp" alt="recently-salmon-sushi" class="recently__img">
+
+
+      </div>
+      <img src="/assets/leaf-branch-2.4c17a1f1.webp" alt="leaf-branch-1" class="recently__leaf-1">
+      <img src="/assets/leaf-branch-3.6ed41119.webp" alt="leaf-branch-3" class="recently__leaf-2">
+    </section>
+    <!-- =/recently = -->
+
+    <!--@note = newsletter = -->
+    <section class="newsletter section">
+      <div class="newsletter__container container">
+        <div class="newsletter__content grid">
+          <img src="/assets/newsletter-sushi.04cd9878.webp" alt="newsletter-sushi" class="newsletter__img">
+
+          <div class="newsletter__data">
+            <span class="section__subtitle">Newsletter</span>
+            <h2 class="section__title">
+              Subscribe For <br>
+              Offer Updates
+            </h2>
+
+            <form action="" class="newsletter__form">
+              <input type="email" placeholder="Enter email" class="newsletter__input">
+              <button class="button newsletter__button">
+                Subscribe <i class="ri-send-plane-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <img src="/assets/spinach-leaf.da70d927.webp" alt="spinach-leaf" class="newsletter__spinach">
+      </div>
+    </section>
+    <!-- =/newsletter = -->
+
+  </main>
+  <!-- =/main = -->
+
+  <!--@note = footer = -->
+  <footer class="footer">
+    <div class="footer__container container grid">
+      <div>
+        <a href="#" class="footer__logo">
+          <img src="data:image/webp;base64,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" alt="logo"> Sushi
+        </a>
+        <p class="footer__description">
+          Food for the body is not <br>
+          enough. There must be food <br>
+          for the soul.
+        </p>
+      </div>
+
+      <div class="footer__content">
+        <div>
+          <h3 class="footer__title">Main Menu</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">About</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Menus</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Offer</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Events</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Information</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Order & Returns</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Videos</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Reservation</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li class="footer__information">
+              Av. Hacienda 1234 <br>
+              Lima 4321, Perú
+            </li>
+            <li class="footer__information">
+              9AM - 11PM
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Social Media</h3>
+          <ul class="footer__social">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <img src="/assets/spring-onion.4b9456b2.webp" alt="spring-onion" class="footer__onion">
+      <img src="/assets/spinach-leaf.da70d927.webp" alt="spinach-leaf" class="footer__spinach">
+      <img src="/assets/leaf-branch-4.642f4f78.webp" alt="leaf-branch-4" class="footer__leaf">
+
+    </div>
+
+    <div class="footer__info container">
+      <div class="footer__card">
+        <img src="data:image/webp;base64,UklGRqYCAABXRUJQVlA4WAoAAAAQAAAASgAAMQAAQUxQSIcAAAABL6CojRQ4uOcfP5jAARERmPstXNW2rVQH+7cCVsATME4B2Lt/GXTDk8+I/ity20jJLMOJ8gcrZ94Nb8zSlYIorKWCyRYJDFcNETTE1JD8ezhJvKcDki4t/FXb8MpzwqVzulngU5b4o9ugAJuG6py+Cn50K1w1/BeiMojKRiqziSwpM67I3gYAVlA4IPgBAACwCwCdASpLADIAPtFap08oJKMiJnv7gQAaCUAYnzNhK/+BuoruOp7QuJIBrannjAPM1trFDmAcSkkvUlI3Tt+VF280zc4m5+yjbhyxuYxWNIAy26Asng7OkTMRXppDOr2trw5OdQgA/vKQyhwiUa2E3VLsCBZvgruBWGxxKtxO91R0n9tdX+r1FrANBuBcytrQEdY/4tjx1mACw5p2yQE9jBY63FOMWKmOQMNES0MZQxrbofS6SPEcN2a7W92HA06kyafEnjUMxEGi4+CxfnEIvgQLDaCRu6LgK8rxTZjxBxhyWrOogigJuV3vVRffKT5eLE28yWUJvJeZrxnwbz3M8HAaaukQYGmrfjJ83w/Tztzc4ZaAQ1vFLKJe0bSO3h7WQTgRRHYAz3qCGTa6XAWyfyXicpTWMONdmAg/GMDHDdBoYPKshw0xm9BttNh3POt2X6Ws31sTM2es8xLZkyirnWtRaSVR6FyZd4VlnvCmVS7PBeUgSk5AcRb+WcdatSyNj2RJ6T4ZHdhJ7BVY6yw75FtrluSn0jhqedugSCiK/s0LjQeD+vYPJuyvUXowXxg6ntRXZSrA2NvhZzEmq8Fr71IpS1XEem2SWkNJLwTmPdH4d6UH3bUb/rynW+WfqW1d8jVVjouiYmYRr1YJ9bwGtqhcAMgWAAA=" alt="footer-card-1">
+        <img src="data:image/webp;base64,UklGRoQCAABXRUJQVlA4WAoAAAAQAAAASgAAMQAAQUxQSJQAAAABL6CQjSQ4uB/AAi3EGVxEBHq/wHEjSYrUS39yAM4BtuDUDtxW+e/MaaAWnxH9V+C2jZJj5usfbPwy1/jNrF0oMIPdqeBjPwksFw0VNNQMgEA9+v9EAjTMMquB4OmpvO3iQbCTBH1bzbC7cyJdlbgg+B6zccjnhBC+92wPl288gWApor++SkFUaqRSNpFKyhRXpN4GVlA4IMoBAADQDACdASpLADIAPslYoEunpaMhtNTpIPAZCWgAz9QJ/jE8tD9sB5gOeq3znehUas/wnUymj5u6BvO5BA3Xi/Nal1c+fKA/RCB2ZiuhV9C5B05ZynVk+IHPYlA/HACljka1D58KgiGb4YEwReJ7fjwA/vYAoLiBp9lwPmeUpCEjI5dHn9C4wTI7jG14lGUcG3w9UKImx3DAVMQwvqnKjduSNyOrR/5cE8ZH/Y/Txh5Z3IDuR1ovaShLNcXpwZBeojEi/ZtqOOj9j82Mhwe8SyvUJxWECWepudNuQt0NNXsVNRUXSHiwA71ctIPBWIT79B/b1l/4qiMrlcemU8msOUqnVO8ZsIM8WGNOl1cChHjbsMAe7WbfhKk4MWTtou5eFlBQ+Rh1D6ssxhvIisBls2By6O97QxfsXMQQrqb8ZnUgx9LKofDdcFqoWpXz3tbs2+9nOLK0le07AMTb1jT0QETgrq2HIeG+UsX6/icZ29G735mURaiXR3X7BjNi0mHTIoaoyURxDILH5KMIQ82NfOGQbjhSAfHVGOfHGB4/OwOagvK4uDb8KZx/xKtBVkeAfAsbGOmAFRm+9f3QAAAOFlRTp4uU50lEuAAAAA==" alt="footer-card-2">
+        <img src="data:image/webp;base64,UklGRrQCAABXRUJQVlA4WAoAAAAQAAAASgAAMQAAQUxQSI8AAAABL6AQAAI02AgklEMGRUQgew3HAdimkUv/gwVoAZ7gTgtcpf2nCen4F9F/BW7bKDlmvv4hNje1GuwjFrMMZh0HObjGw4L62cNAD6M8TH8IlASXxxJ4xWwmIAeEPMiXFeZAV5UyrMyo82hudieEHPmZGxNoTeAJZ04xM2nXe/s3cSmIS41cymZSSZvimtQ7AABWUDgg/gEAAHALAJ0BKksAMgA+0VqnT6gkoyIoGZmZABoJYgDQv+fP3Wr25PPY+gDeGvQA6XhfgrQZYGkmZyIpmuvUseQ435khfx0Qrz3IJVBBxmJILC6QJHPjlbJzcT/vzigv/16nOt2tsAAA/vFyD3QdX1fnMk4G8CfGAdLv2czolOEPlKBddREsUo6W0iV3RL2+kvr9cxYKyKDo7wyUN+2SqxODIEScADm4vBUFo+rYCR/ADTIBNwT+drxZcxKEoEdLFrLt7Qraz7gDxkYKE/3Xx6d05gqzNHfkdJwMOWBh8Iq4eXeCWk0286hVeWEBzUhAb60MAZvBkGcjW41HL3vx7R3GmuRWeNbPO9Y5WIXk+3oMvAtKGgdCeiQ5xvVvLIiMJ1SY6RQkS8UkUohArGfGvKCxIc3zTHZButnLbyTF33t9ho1VPyBqzAp/YzuqKhGq+Ao+gcciQsxfFkhC11ak4ck04xd9+kLp5jOVmC/Y2TFWpAfnL/7PLOPgRARg8WVG37rml2MNOiOnE2+h+L6RCuAph//AVRh4KHi7tSyX7JrRbKggtonZlvCVHYW9Ni72CcaG7LB84H54TxFhG+akQLOX+3zw4lgNOwSh5vf5dmI3LKFVFIDg+2Z/PWqkX3ghSOZPCEWBUW3mCLwsNMeDVkL/BYaY8SX+a1ZUrVVnLAAAAA==" alt="footer-card-3">
+        <img src="data:image/webp;base64,UklGRhwCAABXRUJQVlA4WAoAAAAQAAAASgAAMQAAQUxQSFMAAAABL0CQbZsbwlCGcoNHROCeYBPZtpP7U58MEAxkBQwGfvCvh1NTRPRfQFAwog+anvH1d5ViG8BF2yC6VQeybUyuM/nBFP6+UYJQGlGyQUpi4kJ6CwBWUDggogEAAJAIAJ0BKksAMgA+0WSrUKglo6Kk2qlpABoJYwDTIeuEAG6B3AxhvObddWIX/LqQw8VZfbQ+aUlf7BcIU17EwwiX6Q+kfI3xIfS3mOYAAP7x/7B8ZXMc0mGuEEueAPh8t/UwlqL96NZVqT58AfcgNfuHPsDgQxv/eISthfpD5sZ9UbRnGf1EwWvh2WAtC73vG6yjSCOmvJx/ZGrZP90O/SgJHEBL8dqGVZtfAg0fsBh/FckVZbH0vPO56zHpQpfKuBTo/++a0/5h7WGEh2Gv2cWov1OZvJZ2ubBeRjagO+ijBZa6H5vrGJwy2Y4e0jfFDWx+DHNrWBJVz53QushGoBU8REwef1U5VhnuuJstL7/tcXl7YbquRocw7sOdrKM7BjqX2MaHXIh5zmSDUzlkPrxTall8RbSH5AAvajlcR621GhYfPdbSYwCpHb8RSsLnieZI0/d0gkLciUCSdocZCiAwnT0zhnDDsKLwifJT/4Ofsl2ia2hEyIUbe92mcl1mMGL9B7P6xz6ZrDzjRNhDJqoznEWANDSX81sPx5zmQ+wAAAA=" alt="footer-card-4">
+      </div>
+
+      <span class="footer__copy">
+        &#169; Copyright Sushi Website. All rights reserved
+      </span>
+    </div>
+  </footer>
+  <!-- =/footer = -->
+
+  <!--@note = scrollup = -->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+  <!-- =/scrollup = -->
+  
+  
+</body>
+
+</html>
