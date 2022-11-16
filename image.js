@@ -1,11 +1,11 @@
-import imagemin from "imagemin";
-import imageminWebp from "imagemin-webp";
-import imageminJpegtran from "imagemin-jpegtran";
-import imageminPngquant from "imagemin-pngquant";
+import imagemin from 'imagemin'
+import imageminWebp from 'imagemin-webp'
+import imageminJpegtran from 'imagemin-jpegtran'
+import imageminPngquant from 'imagemin-pngquant'
 
-(async () => {
-  await imagemin(["./source/img/*.{jpg,png}"], {
-    destination: "./source/img/webp",
+;(async () => {
+  await imagemin(['./source/img/*.{jpg,png}'], {
+    destination: './source/img/webp',
     plugins: [
       imageminJpegtran(),
       imageminPngquant({
@@ -13,7 +13,7 @@ import imageminPngquant from "imagemin-pngquant";
       }),
       imageminWebp({ quality: 50 }),
     ],
-  });
-  console.log("Images optimized");
-})();
-//yarn add imagemin imagemin-webp imagemin-jpegtran imagemin-pngquant
+  })
+  console.log('Images optimized')
+})()
+// yarn add imagemin imagemin-webp imagemin-jpegtran imagemin-pngquant
